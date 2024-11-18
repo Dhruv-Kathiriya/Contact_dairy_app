@@ -49,18 +49,18 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Colors.black,
       body: Center(
         child: FadeTransition(
           opacity: _animation,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // App logo with rounded corners and drop shadow
+              Spacer(),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.network(
-                  'https://t4.ftcdn.net/jpg/09/65/97/63/240_F_965976363_1T3o84gRdrrUbGLO84EZDTXL4KhKPotv.jpg',
+                  "https://i.pinimg.com/originals/f3/6f/d1/f36fd10095d1f265c60071599a9156f4.jpg",
                   width: 120.w,
                   height: 120.h,
                   fit: BoxFit.cover,
@@ -80,8 +80,8 @@ class _SplashScreenState extends State<SplashScreen>
               ),
               SizedBox(height: 20.h),
 
-              // Loading indicator
-              const CircularProgressIndicator(
+              Spacer(),
+              LinearProgressIndicator(
                 color: Colors.white,
               ),
             ],
